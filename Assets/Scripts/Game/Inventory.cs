@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour {
     public void Start()
     {
         rigidbody = GetComponentInChildren<Rigidbody>();
+       
     }
 
     public void OnTriggerEnter(Collider other)
