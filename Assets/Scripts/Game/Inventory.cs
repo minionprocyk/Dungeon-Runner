@@ -6,13 +6,7 @@ public class Inventory : MonoBehaviour {
 
     public PlayerInventory PlayerInventory;
     public Item item;
-    private Rigidbody rigidbody;
 
-    public void Start()
-    {
-        rigidbody = GetComponentInChildren<Rigidbody>();
-       
-    }
 
     public void OnTriggerEnter(Collider other)
     {
