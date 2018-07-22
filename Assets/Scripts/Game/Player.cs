@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     public RaceClass RaceClass;
     public IntegerVariable Health;
     public IntegerVariable Energy;
+    public PlayerInventory PlayerInventory;
     public List<Ability> Abilities;
 
 }
