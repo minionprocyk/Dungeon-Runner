@@ -2559,7 +2559,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568801408966340}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2630,6 +2630,7 @@ MonoBehaviour:
   RaceClass: {fileID: 11400000, guid: de7ec58b295a6e44780aa3ca98919218, type: 2}
   Health: {fileID: 11400000, guid: 93c0ef4f45525fe4487f8c6db9423dd3, type: 2}
   Energy: {fileID: 11400000, guid: 16949d47b47ab55419fe43ff86d8ea3f, type: 2}
+  PlayerInventory: {fileID: 11400000, guid: 356e95029c61b884ba86d9660ed1462a, type: 2}
   Abilities:
   - {fileID: 0}
 --- !u!114 &114932162828797406
@@ -2648,7 +2649,7 @@ MonoBehaviour:
   m_JumpPower: 6
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
+  m_MoveSpeedMultiplier: 15
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
 --- !u!124 &124561131207209306
