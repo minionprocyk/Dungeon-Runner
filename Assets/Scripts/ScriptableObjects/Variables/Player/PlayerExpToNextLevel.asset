@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14c304615c412446ba222bf91508a34, type: 3}
   m_Name: PlayerExpToNextLevel
   m_EditorClassIdentifier: 
-  Value: 0
-  RuntimeValue: 0
+  Value: 1
+  RuntimeValue: 1

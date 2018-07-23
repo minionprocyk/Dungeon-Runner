@@ -11,13 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f99566743b986440a61fdb763ef2b09, type: 3}
   m_Name: WarriorAttributes
   m_EditorClassIdentifier: 
-  Vitality: 0
-  Stamina: 0
-  MoveSpeed: 0
-  AttackSpeed: 0
-  AttackPower: 0
-  SpellPower: 0
-  MeleePower: 0
-  RangedPower: 0
-  HealingPower: 0
-  SomethingElse: 0
+  Vitality: 100
+  Stamina: 100
+  MoveSpeed: 1.1
+  AttackSpeed: 1
+  AttackPower: 100
+  SpellPower: 90
+  MeleePower: 120
+  RangedPower: 90
+  HealingPower: 90
