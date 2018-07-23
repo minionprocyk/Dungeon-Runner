@@ -7,8 +7,8 @@ public class Attributes : ScriptableObject
 {
     public int Vitality = 100;          //Health
     public int Stamina = 100;           //Energy
-    public float MoveSpeed = 1.0;         //Speed modifier for character walk/run speed
-    public float AttackSpeed = 1.0;       //Casting and attack rate
+    public float MoveSpeed = 1.0f;         //Speed modifier for character walk/run speed
+    public float AttackSpeed = 1.0f;       //Casting and attack rate
     public float AttackPower = 100;       //Overall attack power, affects all spells and actions
     public float SpellPower = 100;        //Attack power for only magic
     public float MeleePower = 100;        //Attack power for only melee
