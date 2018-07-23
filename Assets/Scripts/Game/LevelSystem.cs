@@ -2,27 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
-
-    public Race Race;
-    public RaceClass RaceClass;
-    public IntegerVariable Health;              //Health is BaseHealth with modifiers applied
-    public IntegerVariable Energy;              //Health is BaseEnergy with modifiers applied
-    public PlayerInventory PlayerInventory;
-    public List<Ability> Abilities;
-    public IntegerVariable Level;
-    public LongVariable Experience;
-    public LongVariable ExpToNextLevel;
-
-    
-}
-
-
-/* void Start()
+public class LevelSystem : MonoBehaviour {
+    /*
+    void Start()
     {
         //TODO: set these to a normal assigned value. HARD CODE THIS SHIT FOR NOW
-        BaseHealth.Value = 100;
-        BaseEnergy.Value = 100;
+        Player.BaseHealth.Value = 100;
+        Player.BaseEnergy.Value = 100;
         Level.Value = 0;
         Experience.Value = 0;
         ExpToNextLevel.Value = 1;
@@ -62,7 +48,7 @@ public class Player : MonoBehaviour {
                 BaseHealth.Value += 9875;
                 print("Congratulations! Level 3. You are now much stronger");
                 break;
-            
+
         }
     }
 
@@ -73,5 +59,5 @@ public class Player : MonoBehaviour {
             LevelUp();
         }
     }
-
     */
+}

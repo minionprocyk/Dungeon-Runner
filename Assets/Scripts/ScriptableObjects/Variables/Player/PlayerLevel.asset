@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58e3cb4aeb059324cb1b8482eb689f55, type: 3}
-  m_Name: PlayerHealth
+  m_Name: PlayerLevel
   m_EditorClassIdentifier: 
-  Value: 100
-  RuntimeValue: 100
+  Value: 0
+  RuntimeValue: 0
