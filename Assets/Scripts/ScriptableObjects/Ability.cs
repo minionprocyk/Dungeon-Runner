@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Ability : ScriptableObject {
     public string AbilityName = "New Ability";
+    public GameObject AbilityEffect;
     public Sprite AbilitySprite;
     public AudioClip AbilitySound;
     public float AbilityBaseCoolDown = 1f;
