@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
+
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (ThirdPersonCharacter))]
@@ -39,6 +41,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
+ 
         }
 
 
