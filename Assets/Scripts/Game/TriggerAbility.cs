@@ -18,7 +18,8 @@ public class TriggerAbility : MonoBehaviour {
             ability.Trigger();
             audioSource.clip = ability.AbilitySound;
             audioSource.Play();
-            Instantiate(ability.AbilityEffect, GameObject.Find("ThirdPersonController").transform.position,Quaternion.identity);
+            GameObject fromObject = GameObject.Find("ThirdPersonController");
+            Instantiate(ability.AbilityEffect, fromObject.transform.position,fromObject.transform.rotation);
         }
 	}
 }
