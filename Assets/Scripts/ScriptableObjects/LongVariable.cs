@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Variables/Integer")]
-public class IntegerVariable : ScriptableObject, 
-    ISerializationCallbackReceiver {
+[CreateAssetMenu(menuName = "Variables/Long")]
+public class LongVariable : ScriptableObject,
+    ISerializationCallbackReceiver
+{
 
-    public int Value;
-    public int RuntimeValue;
+    public long Value;
+    public long RuntimeValue;
 
     public void OnAfterDeserialize()
     {

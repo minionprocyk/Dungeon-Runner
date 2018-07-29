@@ -5,4 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="Character/Class")]
 public class RaceClass : ScriptableObject {
     public string ClassName;
+    public Attributes ClassAtributes;
 }
