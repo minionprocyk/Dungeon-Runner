@@ -8,8 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fac50ca40a3c84586429a428cb3b20, type: 3}
-  m_Name: Sorcerer
+  m_Script: {fileID: 11500000, guid: b14c304615c412446ba222bf91508a34, type: 3}
+  m_Name: PlayerExpToNextLevel
   m_EditorClassIdentifier: 
-  ClassName: Sorcerer
-  ClassAtributes: {fileID: 11400000, guid: f029a003c7109624aa80f04f6f6337d8, type: 2}
+  Value: 1
+  RuntimeValue: 1

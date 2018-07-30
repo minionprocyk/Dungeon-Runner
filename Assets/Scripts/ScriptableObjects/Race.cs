@@ -6,4 +6,5 @@ using UnityEngine;
 public class Race : ScriptableObject{
 
     public bool IsLarge;
+    public Attributes RaceAttributes;
 }

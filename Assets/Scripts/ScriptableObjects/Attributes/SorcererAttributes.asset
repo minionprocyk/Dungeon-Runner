@@ -8,8 +8,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94fac50ca40a3c84586429a428cb3b20, type: 3}
-  m_Name: Sorcerer
+  m_Script: {fileID: 11500000, guid: 1f99566743b986440a61fdb763ef2b09, type: 3}
+  m_Name: SorcererAttributes
   m_EditorClassIdentifier: 
-  ClassName: Sorcerer
-  ClassAtributes: {fileID: 11400000, guid: f029a003c7109624aa80f04f6f6337d8, type: 2}
+  Vitality: 100
+  Stamina: 100
+  MoveSpeed: 1
+  AttackSpeed: 1
+  AttackPower: 1
+  SpellPower: 120
+  MeleePower: 90
+  RangedPower: 90
+  HealingPower: 90

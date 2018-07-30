@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e3cb4aeb059324cb1b8482eb689f55, type: 3}
   m_Name: PlayerEnergy
   m_EditorClassIdentifier: 
-  Value: 0
-  RuntimeValue: 0
+  Value: 100
+  RuntimeValue: 100
