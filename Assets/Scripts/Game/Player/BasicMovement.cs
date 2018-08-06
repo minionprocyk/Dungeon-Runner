@@ -12,9 +12,9 @@ public class BasicMovement : MonoBehaviour
     [SerializeField]
     private float yRotationSpeed = 0.1f;
     [SerializeField]
-    private float maxHeadRotation = 80.0f;
+    private float maxHeadRotation = 35.0f;
     [SerializeField]
-    private float minHeadRotation = -80.0f;
+    private float minHeadRotation = -30.0f;
     [SerializeField]
     private float jumpSpeed = 15f;
     [SerializeField]
