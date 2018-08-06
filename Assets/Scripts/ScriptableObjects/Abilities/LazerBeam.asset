@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: LazerBeam
   m_EditorClassIdentifier: 
   AbilityName: LazerBeam
-  AbilityEffect: {fileID: 1889836543938766, guid: 55f43bcd5c038f74cb726fc1c24fe4a1,
+  AbilityEffect: {fileID: 1837758011947908, guid: 516e22118d321b6488b9fdaab10d26d5,
     type: 2}
   AbilitySprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   AbilitySound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
