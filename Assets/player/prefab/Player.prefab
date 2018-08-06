@@ -2701,7 +2701,7 @@ MonoBehaviour:
   speed: 10
   xRotationSpeed: 2
   yRotationSpeed: 0.1
-  maxHeadRotation: 35
+  maxHeadRotation: 30
   minHeadRotation: -30
   jumpSpeed: 15
   gravity: 30
