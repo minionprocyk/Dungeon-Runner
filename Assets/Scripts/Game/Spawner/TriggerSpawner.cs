@@ -12,6 +12,7 @@ public class TriggerSpawner : MonoBehaviour {
     public GameObject[] Enemies;
     public Transform spawnPoint;
     public TMPro.TextMeshPro text;
+
 	// Use this for initialization
 	void Start () {
         _reloadTime = reloadTime;        
