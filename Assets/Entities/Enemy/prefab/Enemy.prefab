@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114868397234904854}
   - component: {fileID: 114869139214445284}
   - component: {fileID: 114483683797528230}
+  - component: {fileID: 114554335423397232}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -295,6 +296,18 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   AggroRadius: 10
+--- !u!114 &114554335423397232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149196005517604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0bc34675cab2a43a1bdede818e6e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToRotate: {fileID: 224591950023385458}
 --- !u!114 &114723435852565794
 MonoBehaviour:
   m_ObjectHideFlags: 1
