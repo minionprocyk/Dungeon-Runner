@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a559111422e364a9c6b86115d6da2a, type: 3}
+  m_Name: TestEnemyConfig
+  m_EditorClassIdentifier: 
+  EntityHealth: {fileID: 11400000, guid: 932c52d45c008ff458db5e7f3bdc6945, type: 2}
+  EntityLevel: {fileID: 11400000, guid: 64664ee6df31d0e4fb5accf0ce446d87, type: 2}
+  EntityEnergy: {fileID: 11400000, guid: 920fb8ef4305960469e1a38a2ce9f6e9, type: 2}
+  Icon: {fileID: 0}
+  LevelOffset: {fileID: 11400000, guid: 8e4705b75c3d6564993d23652fa987b2, type: 2}

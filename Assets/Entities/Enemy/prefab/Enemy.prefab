@@ -22,12 +22,11 @@ GameObject:
   - component: {fileID: 195947088353496000}
   - component: {fileID: 114091879180858740}
   - component: {fileID: 54695546912065426}
-  - component: {fileID: 114121545076420064}
   - component: {fileID: 65040779587769270}
   - component: {fileID: 114477257618761828}
   - component: {fileID: 114868397234904854}
-  - component: {fileID: 114661546086740942}
   - component: {fileID: 114869139214445284}
+  - component: {fileID: 114483683797528230}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -253,18 +252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10.59
---- !u!114 &114121545076420064
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149196005517604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07b523ff5d13d24479c2d9def481ef72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: {fileID: 11400000, guid: 932c52d45c008ff458db5e7f3bdc6945, type: 2}
 --- !u!114 &114477257618761828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,7 +302,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114661546086740942
+--- !u!114 &114483683797528230
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,13 +310,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1149196005517604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f2f4c28238a3e49b66639f7db1ddd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bab16e7564f7de438f2be59fa092722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  integerVariable: {fileID: 11400000, guid: 932c52d45c008ff458db5e7f3bdc6945, type: 2}
-  value: 0
-  gameEvents:
-  - {fileID: 11400000, guid: 5627632d47c08c046992c49bfcfe15fb, type: 2}
+  EntityConfig: {fileID: 11400000, guid: 47287df6ef917634491e854d67ea0895, type: 2}
+  Health: 0
+  Level: 0
+  Energy: 0
+  AggroRadius: 0
 --- !u!114 &114723435852565794
 MonoBehaviour:
   m_ObjectHideFlags: 1
