@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114091879180858740}
   - component: {fileID: 54695546912065426}
   - component: {fileID: 65040779587769270}
-  - component: {fileID: 114477257618761828}
   - component: {fileID: 114868397234904854}
   - component: {fileID: 114869139214445284}
   - component: {fileID: 114483683797528230}
@@ -252,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10.59
---- !u!114 &114477257618761828
+--- !u!114 &114483683797528230
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,11 +259,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1149196005517604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d0c8d72868de7428155591db58b9c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bab16e7564f7de438f2be59fa092722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 5627632d47c08c046992c49bfcfe15fb, type: 2}
-  Response:
+  EntityConfig: {fileID: 11400000, guid: 47287df6ef917634491e854d67ea0895, type: 2}
+  CurrentHealth: 0
+  MaxHealth: 0
+  Level: 0
+  Energy: 0
+  DeathEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 198148786222574062}
@@ -289,35 +292,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 114477257618761828}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114483683797528230
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1149196005517604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bab16e7564f7de438f2be59fa092722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntityConfig: {fileID: 11400000, guid: 47287df6ef917634491e854d67ea0895, type: 2}
-  Health: 0
-  Level: 0
-  Energy: 0
-  AggroRadius: 0
+  AggroRadius: 10
 --- !u!114 &114723435852565794
 MonoBehaviour:
   m_ObjectHideFlags: 1

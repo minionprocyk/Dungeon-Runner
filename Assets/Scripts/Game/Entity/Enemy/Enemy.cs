@@ -8,11 +8,7 @@ public class Enemy : Entity {
     [SerializeField]
     private float AggroRadius;
 
-    //TODO: Stop the hack please...
-    public override void Die()
-    {
-        GetComponent<GameEventListener>().OnEventRaised();
-    }
+
 
     void Start () {
         InitializeConfig();

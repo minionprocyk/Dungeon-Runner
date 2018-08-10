@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public abstract class Entity : MonoBehaviour{
 
     [SerializeField]
@@ -9,26 +9,40 @@ public abstract class Entity : MonoBehaviour{
 
     [Header(header:"Entity Runtime Values:")]
     [SerializeField]
-    protected int Health;
+    protected int CurrentHealth;
+
+    [SerializeField]
+    protected int MaxHealth;
     [SerializeField]
     protected int Level;
     [SerializeField]
     protected int Energy;
 
+    [SerializeField]
+    protected UnityEvent DeathEvent;
     protected void InitializeConfig()
     {
-        Health = EntityConfig.EntityHealth.RuntimeValue;
+        MaxHealth = EntityConfig.EntityHealth.RuntimeValue;
+        CurrentHealth = MaxHealth;
         Level = EntityConfig.EntityLevel.RuntimeValue;
         Energy = EntityConfig.EntityEnergy.RuntimeValue;
     }
     public virtual void Damage(int value)
     {
-        Health = Mathf.Max(0,Health-value);
+        CurrentHealth = Mathf.Max(0, CurrentHealth - value);
 
-        if(Health<=0)
+        if(CurrentHealth <= 0)
         {
             Die();
         }
     }
-    public abstract void Die();
+
+    public virtual void LevelUp()
+    {
+        Level += 1;
+    }
+    public virtual void Die()
+    {
+        DeathEvent.Invoke();
+    }
 }

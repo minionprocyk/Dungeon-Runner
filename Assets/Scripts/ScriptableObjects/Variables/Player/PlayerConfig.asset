@@ -15,6 +15,8 @@ MonoBehaviour:
   EntityLevel: {fileID: 11400000, guid: de2554959464b434c9d285668a5f3dcc, type: 2}
   EntityEnergy: {fileID: 11400000, guid: 16949d47b47ab55419fe43ff86d8ea3f, type: 2}
   Icon: {fileID: 0}
+  Race: {fileID: 11400000, guid: e98e17c36f970a34fb3ba3fde4fca78a, type: 2}
+  RaceClass: {fileID: 11400000, guid: de7ec58b295a6e44780aa3ca98919218, type: 2}
   Experience: {fileID: 11400000, guid: 7c93e79702aba96469e540f362890315, type: 2}
   ExperienceToNextLevel: {fileID: 11400000, guid: 74690e424b024db4ca50ba16b5416000,
     type: 2}
