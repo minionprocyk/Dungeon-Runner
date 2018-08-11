@@ -6,7 +6,7 @@ public class Enemy : Entity {
 
     [Header(header:"Enemy Runtime Values:")]
     [SerializeField]
-    private float AggroRadius;
+    protected float AggroRadius;
 
 
 
@@ -26,6 +26,21 @@ public class Enemy : Entity {
         }
         
     }
-	
+
+    //draw a wire sphere of this enemy's aggro range
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, AggroRadius);
+    }
+    public bool InAggroRange(Transform other)
+    {
+        float distance = Vector3.Distance(other.position, this.transform.position);
+        return InAggroRange(distance);
+    }
+    public bool InAggroRange(float distance)
+    {
+        return AggroRadius <= distance;
+    }
     
 }

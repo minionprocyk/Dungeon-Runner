@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: LazerBeam
   m_EditorClassIdentifier: 
   AbilityName: LazerBeam
-  AbilityEffect: {fileID: 1837758011947908, guid: 516e22118d321b6488b9fdaab10d26d5,
+  AbilityEffect: {fileID: 1019399303626396, guid: e96c1737ec3b02c4099d30da5fa37bb2,
     type: 2}
   AbilitySprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  AbilitySound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
+  AbilitySound: {fileID: 8300000, guid: 32fd91125ef012241babdc05a523a6fd, type: 3}
   AbilityBaseCoolDown: 1
   Damage: 15
   Range: 25

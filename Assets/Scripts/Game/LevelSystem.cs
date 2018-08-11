@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class LevelSystem : MonoBehaviour {
 
-    public Player Player;
+    private Player Player;
 
+    private void Start()
+    {
+        Player = PlayerManager.instance.player.GetComponent<Player>();
+    }
     void Update()
     {
         Exp();

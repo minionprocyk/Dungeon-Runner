@@ -6,7 +6,8 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour {
 
-    public float lookRadius;
+    [SerializeField]
+    private Enemy Enemy;
 
     private Transform targetPlayer;
     private NavMeshAgent navMeshAgent;
@@ -17,17 +18,13 @@ public class EnemyController : MonoBehaviour {
 	}
 
     void Update () {
-        float distance = Vector3.Distance(targetPlayer.position, transform.position);
+        //float distance = Vector3.Distance(targetPlayer.position, transform.position);
 
-        if(distance <= lookRadius)
+        if(Enemy.InAggroRange(targetPlayer))
         {
             navMeshAgent.SetDestination(targetPlayer.position);
         }
 	}
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
-    }
+   
 }

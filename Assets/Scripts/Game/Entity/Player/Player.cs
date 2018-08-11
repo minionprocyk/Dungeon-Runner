@@ -27,9 +27,6 @@ public class Player : Entity {
             //Level = EnemyConfig.EntityLevel.RuntimeValue;
         }
     }
-    public override void Die()
-    {
-        throw new System.NotImplementedException();
-    }
+ 
     
 }
