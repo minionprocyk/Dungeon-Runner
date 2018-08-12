@@ -6,7 +6,7 @@ public abstract class Ability : ScriptableObject {
     public string AbilityName = "New Ability";
     public GameObject AbilityEffect;
     public Sprite AbilitySprite;
-    public AudioClip AbilitySound;
+    public SimpleAudioSource AbilitySound;
     public float AbilityBaseCoolDown = 1f;
 
     public abstract void Initialize(GameObject obj);

@@ -4,7 +4,8 @@ using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class TriggerAbility : MonoBehaviour {
-    public Ability ability;
+    [SerializeField]
+    private  Ability ability;
     private AudioSource audioSource;
     private void Start()
     {
@@ -16,9 +17,9 @@ public class TriggerAbility : MonoBehaviour {
         {
             ability.Initialize(this.gameObject);
             ability.Trigger();
-            audioSource.clip = ability.AbilitySound;
-            audioSource.Play();
-            GameObject fromObject = GameObject.Find("Player");
+            ability.AbilitySound.Play(audioSource);
+
+            GameObject fromObject = PlayerManager.instance.player;
             Instantiate(ability.AbilityEffect, fromObject.transform.position,fromObject.transform.rotation);
         }
 	}

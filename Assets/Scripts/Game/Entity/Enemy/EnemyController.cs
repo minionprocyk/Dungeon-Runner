@@ -20,7 +20,7 @@ public class EnemyController : MonoBehaviour {
     void Update () {
         //float distance = Vector3.Distance(targetPlayer.position, transform.position);
 
-        if(Enemy.InAggroRange(targetPlayer))
+        if(Enemy.InAggroRange(targetPlayer) && navMeshAgent.enabled)
         {
             navMeshAgent.SetDestination(targetPlayer.position);
         }
