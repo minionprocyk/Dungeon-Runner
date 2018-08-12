@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Attributes")]
+[CreateAssetMenu(menuName = "Character/Attributes")]
 public class Attributes : ScriptableObject
 {
     public int Vitality = 100;          //Health

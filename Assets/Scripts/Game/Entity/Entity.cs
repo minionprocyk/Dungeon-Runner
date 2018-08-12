@@ -8,15 +8,11 @@ public abstract class Entity : MonoBehaviour{
     protected EntityConfig EntityConfig;
 
     [Header(header:"Entity Runtime Values:")]
-    [SerializeField]
-    protected int CurrentHealth;
+    public int CurrentHealth;
 
-    [SerializeField]
-    protected int MaxHealth;
-    [SerializeField]
-    protected int Level;
-    [SerializeField]
-    protected int Energy;
+    public int MaxHealth;
+    public int Level;
+    public int Energy;
 
     [SerializeField]
     protected UnityEvent DeathEvent;
