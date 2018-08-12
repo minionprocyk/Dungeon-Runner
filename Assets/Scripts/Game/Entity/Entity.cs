@@ -22,10 +22,10 @@ public abstract class Entity : MonoBehaviour{
     protected UnityEvent DeathEvent;
     protected void InitializeConfig()
     {
-        MaxHealth = EntityConfig.EntityHealth.RuntimeValue;
+        MaxHealth = EntityConfig.EntityHealth;
         CurrentHealth = MaxHealth;
-        Level = EntityConfig.EntityLevel.RuntimeValue;
-        Energy = EntityConfig.EntityEnergy.RuntimeValue;
+        Level = EntityConfig.EntityLevel;
+        Energy = EntityConfig.EntityEnergy;
     }
     public virtual void Damage(int value)
     {

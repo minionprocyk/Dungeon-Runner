@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
@@ -37,7 +35,7 @@ public class BasicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+       // Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         Vector2 mouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         if (controller.isGrounded)
         {

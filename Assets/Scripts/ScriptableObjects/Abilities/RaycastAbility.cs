@@ -17,15 +17,20 @@ public class RaycastAbility : Ability
         rcShoot = obj.GetComponent<RaycastShootTriggerable>();
         rcShoot.Initialize();
 
-        rcShoot.gunDamage = Damage;
-        rcShoot.weaponRange = Range;
-        rcShoot.hitForce = Force;
-        rcShoot.laserLine.material = new Material(Shader.Find("Unlit/Color"));
-        rcShoot.laserLine.material.color = Color;
+        rcShoot.GunDamage = Damage;
+        rcShoot.WeaponRange = Range;
+        rcShoot.HitForce = Force;
+        rcShoot.LaserLine.material = new Material(Shader.Find("Unlit/Color"));
+        rcShoot.LaserLine.material.color = Color;
     }
 
     public override void Trigger()
     {
-        rcShoot.Fire();
+        rcShoot.Trigger(this);
+
+        //create a particle effect from the player's position
+        GameObject fromObject = PlayerManager.instance.player;
+        Instantiate(AbilityEffect, fromObject.transform.position, fromObject.transform.rotation);
+
     }
 }

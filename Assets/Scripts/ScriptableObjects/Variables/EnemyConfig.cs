@@ -6,5 +6,5 @@ using UnityEngine;
 public class EnemyConfig : EntityConfig {
 
     [Header(header: "EnemyConfig")]
-    public IntegerVariable LevelOffset;
+    public int LevelOffset;
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+[CustomEditor(typeof(AudioEvent), true)]
 public class AudioEventEditor : Editor {
     [SerializeField]
     private AudioSource source;

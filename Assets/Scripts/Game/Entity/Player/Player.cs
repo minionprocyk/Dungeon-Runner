@@ -16,8 +16,8 @@ public class Player : Entity {
         if (base.EntityConfig.GetType() == typeof(EnemyConfig))
         {
             PlayerConfig playerConfig = (PlayerConfig)EntityConfig;
-            Experience = playerConfig.Experience.RuntimeValue;
-            ExpToNextLevel = playerConfig.ExperienceToNextLevel.RuntimeValue;
+            Experience = playerConfig.Experience;
+            ExpToNextLevel = playerConfig.ExperienceToNextLevel;
             /**
              * Enemies have a level offset that can be used to spawn
              * enemies with a minor level variance. (Think WoW, Diablo)
@@ -27,6 +27,20 @@ public class Player : Entity {
             //Level = EnemyConfig.EntityLevel.RuntimeValue;
         }
     }
- 
+    
+    public void CastAbility(int index)
+    {
+        
+        if (Abilities.Count>index)
+        {
+            Ability ability = Abilities[index];
+            ability.Initialize(this.gameObject);
+            ability.Trigger();
+        }
+        else
+        {
+            //cannot cast ability. 
+        }
+    }
     
 }

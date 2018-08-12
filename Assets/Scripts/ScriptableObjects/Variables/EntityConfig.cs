@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class EntityConfig : ScriptableObject {
 
     [Header(header:"Entity Config")]
-    public IntegerVariable EntityHealth;
-    public IntegerVariable EntityLevel;
-    public IntegerVariable EntityEnergy;
+    public int EntityHealth;
+    public int EntityLevel;
+    public int EntityEnergy;
     public Image Icon;
 }

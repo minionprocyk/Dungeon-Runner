@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraScript : MonoBehaviour
 {
     
-    private Transform target;
+   // private Transform target;
 
     public Vector3 offset;
     public float smoothSpeed = 0.125f;
@@ -19,7 +19,7 @@ public class CameraScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        target = GameObject.FindWithTag("Player").transform;
+        //target = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame

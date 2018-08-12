@@ -8,7 +8,7 @@ public class PlayerConfig : EntityConfig {
     [Header(header: "PlayerConfig")]
     public Race Race;
     public RaceClass RaceClass;
-    public LongVariable Experience;
-    public LongVariable ExperienceToNextLevel;
+    public long Experience;
+    public long ExperienceToNextLevel;
 
 }

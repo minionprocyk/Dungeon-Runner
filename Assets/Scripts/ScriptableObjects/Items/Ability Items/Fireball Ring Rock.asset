@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f4ea7a56e064b4db12c3d6cd2cbe2e, type: 3}
+  m_Name: Fireball Ring Rock
+  m_EditorClassIdentifier: 
+  Name: Fireball Ring Rock
+  Description: Hurls a fireball at the foe. Ouch! That BURNS!
+  ManaCost: 0
+  HealthCost: 0
+  Icon: {fileID: 21300000, guid: 65e4d417c10618a4782d1d1155f1cc46, type: 3}
+  Castable: {fileID: 11400000, guid: 9e8e9785fd9058944a58713e327469d1, type: 2}

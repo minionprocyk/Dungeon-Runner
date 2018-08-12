@@ -21,8 +21,6 @@ public class Enemy : Entity {
              * 
              * Level variance not yet implemented
              */
-            //Level = EnemyConfig.EntityLevel.RuntimeValue;
-            Debug.Log("Level Offset: " + EnemyConfig.LevelOffset.RuntimeValue);
         }
         
     }
