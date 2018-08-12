@@ -15,7 +15,7 @@ MonoBehaviour:
   AbilityEffect: {fileID: 1019399303626396, guid: e96c1737ec3b02c4099d30da5fa37bb2,
     type: 2}
   AbilitySprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  AbilitySound: {fileID: 8300000, guid: 32fd91125ef012241babdc05a523a6fd, type: 3}
+  AbilitySound: {fileID: 11400000, guid: 156feac5dd5b16741aa72f543787fca3, type: 2}
   AbilityBaseCoolDown: 1
   Damage: 15
   Range: 25

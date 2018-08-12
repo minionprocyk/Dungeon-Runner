@@ -9,9 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2081f561ddca9742a1227c33a29e854, type: 3}
-  m_Name: ParticleAudioEffect
+  m_Name: LazerEffect
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  clips: []
-  volume: {fileID: 0}
-  pitch: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 6537d1238ee68e04d868326bf1893f32, type: 3}
+  volume:
+    Min: 36.153847
+    Max: 56.153866
+  pitch:
+    Min: 0.24615385
+    Max: 0.40769243
