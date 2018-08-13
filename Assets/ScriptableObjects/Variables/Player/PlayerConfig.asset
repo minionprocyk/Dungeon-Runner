@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae553eebf1714b242a73adf2787a2ccd, type: 3}
+  m_Name: PlayerConfig
+  m_EditorClassIdentifier: 
+  EntityHealth: {fileID: 11400000, guid: 93c0ef4f45525fe4487f8c6db9423dd3, type: 2}
+  EntityLevel: {fileID: 11400000, guid: de2554959464b434c9d285668a5f3dcc, type: 2}
+  EntityEnergy: {fileID: 11400000, guid: 16949d47b47ab55419fe43ff86d8ea3f, type: 2}
+  Icon: {fileID: 0}
+  Race: {fileID: 11400000, guid: e98e17c36f970a34fb3ba3fde4fca78a, type: 2}
+  RaceClass: {fileID: 11400000, guid: de7ec58b295a6e44780aa3ca98919218, type: 2}
+  Experience: {fileID: 11400000, guid: 7c93e79702aba96469e540f362890315, type: 2}
+  ExperienceToNextLevel: {fileID: 11400000, guid: 74690e424b024db4ca50ba16b5416000,
+    type: 2}

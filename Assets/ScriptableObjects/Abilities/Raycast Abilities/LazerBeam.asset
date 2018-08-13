@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce2780471898bb4980d71cde2077784, type: 3}
+  m_Name: LazerBeam
+  m_EditorClassIdentifier: 
+  AbilityName: LazerBeam
+  AbilityEffect: {fileID: 1019399303626396, guid: e96c1737ec3b02c4099d30da5fa37bb2,
+    type: 2}
+  AbilitySprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  AbilitySound: {fileID: 11400000, guid: 156feac5dd5b16741aa72f543787fca3, type: 2}
+  AbilityBaseCoolDown: 1
+  Damage: 15
+  Range: 25
+  Force: 0.2
+  Color: {r: 0.45360553, g: 1, b: 0.28773582, a: 0}

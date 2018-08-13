@@ -4,47 +4,53 @@ using UnityEngine;
 
 public class LevelSystem : MonoBehaviour {
 
-    public Player Player;
+    private Player Player;
 
+    private void Start()
+    {
+        Player = PlayerManager.instance.player.GetComponent<Player>();
+    }
     void Update()
     {
         Exp();
         //TODO: add modifiers, regen, etc
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)) //use Unity InputManager
         {
-            Player.Experience.RuntimeValue += 1;
+            Player.Experience += 1;
             print("Rewarding exp");
         }
     }
 
     void LevelUp()
     {
-        Player.Level.RuntimeValue += 1;
-        Player.Experience.RuntimeValue = Player.Experience.RuntimeValue - Player.ExpToNextLevel.RuntimeValue;
-        Player.ExpToNextLevel.RuntimeValue = Player.Level.RuntimeValue;// 100 * (Level.Value + 1) * (Level.Value + 1);
+        Player.LevelUp();
+        Player.Experience = Player.Experience - Player.ExpToNextLevel;
+        Player.ExpToNextLevel +=10;// 100 * (Level.Value + 1) * (Level.Value + 1);
 
         //TODO: rewards
-        switch (Player.Level.RuntimeValue)
+        /*
+        switch (Player.Level)
         {
             case 1:
-                Player.Health.RuntimeValue += 25;
+                Player.MaxHealth += 25;
                 print("Congratulations! Level 1");
                 break;
             case 2:
-                Player.Energy.RuntimeValue += 5;
+                Player.Energy += 5;
                 print("Congratulations! Level 2");
                 break;
             case 3:
-                Player.Health.RuntimeValue += 9875;
+                Player.Health += 9875;
                 print("Congratulations! Level 3. You are now much stronger");
                 break;
 
         }
+        */
     }
 
     void Exp()
     {
-        if (Player.Experience.RuntimeValue >= Player.ExpToNextLevel.RuntimeValue)
+        if (Player.Experience >= Player.ExpToNextLevel)
         {
             LevelUp();
         }
