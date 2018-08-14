@@ -10,5 +10,6 @@ public class EntityConfig : ScriptableObject {
     public int EntityHealth;
     public int EntityLevel;
     public int EntityEnergy;
-    public Image Icon;
+    public Attributes EntityAttributes;
+    public Sprite Icon;
 }

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89cde0c092c2e6940958951e680b29f1, type: 3}
+  m_Name: Leg Plate Armor
+  m_EditorClassIdentifier: 
+  AbilitySet:
+  - {fileID: 11400000, guid: 9e8e9785fd9058944a58713e327469d1, type: 2}
+  - {fileID: 11400000, guid: 9e8e9785fd9058944a58713e327469d1, type: 2}
+  - {fileID: 11400000, guid: 9e8e9785fd9058944a58713e327469d1, type: 2}
+  - {fileID: 11400000, guid: 9e8e9785fd9058944a58713e327469d1, type: 2}
+  - {fileID: 11400000, guid: 9e8e9785fd9058944a58713e327469d1, type: 2}
+  EquipmentAttributes: {fileID: 11400000, guid: b918b3092eaba8445b6ef4693ee20249,
+    type: 2}
+  Type: {fileID: 0}

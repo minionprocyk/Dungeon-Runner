@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 public abstract class Entity : MonoBehaviour{
 
@@ -14,6 +12,17 @@ public abstract class Entity : MonoBehaviour{
     public int Level;
     public int Energy;
 
+    [Header(header:"Entity Runtime Attributes:")]
+    public int Vitality;          //Health
+    public int Stamina;           //Energy
+    public float MoveSpeed;         //Speed modifier for character walk/run speed
+    public float AttackSpeed;       //Casting and attack rate
+    public float AttackPower;       //Overall attack power, affects all spells and actions
+    public float SpellPower;        //Attack power for only magic
+    public float MeleePower;        //Attack power for only melee
+    public float RangedPower;       //Attack power for only physical ranged
+    public float HealingPower;      //Attack power for only healing
+
     [SerializeField]
     protected UnityEvent DeathEvent;
     protected void InitializeConfig()
@@ -22,6 +31,15 @@ public abstract class Entity : MonoBehaviour{
         CurrentHealth = MaxHealth;
         Level = EntityConfig.EntityLevel;
         Energy = EntityConfig.EntityEnergy;
+        Vitality = EntityConfig.EntityAttributes.Vitality;
+        Stamina = EntityConfig.EntityAttributes.Stamina;
+        MoveSpeed = EntityConfig.EntityAttributes.MoveSpeed;
+        AttackSpeed = EntityConfig.EntityAttributes.AttackSpeed;
+        AttackPower = EntityConfig.EntityAttributes.AttackPower;
+        SpellPower = EntityConfig.EntityAttributes.SpellPower;
+        MeleePower = EntityConfig.EntityAttributes.MeleePower;
+        RangedPower = EntityConfig.EntityAttributes.RangedPower;
+        HealingPower = EntityConfig.EntityAttributes.HealingPower;
     }
     public virtual void Damage(int value)
     {
