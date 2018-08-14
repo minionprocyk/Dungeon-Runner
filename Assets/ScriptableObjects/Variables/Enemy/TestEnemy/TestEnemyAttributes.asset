@@ -11,12 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f99566743b986440a61fdb763ef2b09, type: 3}
   m_Name: TestEnemyAttributes
   m_EditorClassIdentifier: 
-  Vitality: 100
-  Stamina: 100
+  Vitality: 10
+  Stamina: 1
   MoveSpeed: 1
   AttackSpeed: 1
-  AttackPower: 100
-  SpellPower: 100
-  MeleePower: 100
-  RangedPower: 100
-  HealingPower: 100
+  AttackPower: 10
+  SpellPower: 10
+  MeleePower: 5
+  RangedPower: 0
+  HealingPower: 0

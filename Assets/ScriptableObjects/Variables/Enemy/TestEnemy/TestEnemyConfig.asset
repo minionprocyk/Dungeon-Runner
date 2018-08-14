@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a559111422e364a9c6b86115d6da2a, type: 3}
   m_Name: TestEnemyConfig
   m_EditorClassIdentifier: 
-  EntityHealth: {fileID: 11400000, guid: 932c52d45c008ff458db5e7f3bdc6945, type: 2}
-  EntityLevel: {fileID: 11400000, guid: 64664ee6df31d0e4fb5accf0ce446d87, type: 2}
-  EntityEnergy: {fileID: 11400000, guid: 920fb8ef4305960469e1a38a2ce9f6e9, type: 2}
-  Icon: {fileID: 0}
-  LevelOffset: {fileID: 11400000, guid: 8e4705b75c3d6564993d23652fa987b2, type: 2}
+  EntityHealth: 0
+  EntityLevel: 0
+  EntityEnergy: 4
+  EntityAttributes: {fileID: 11400000, guid: 2b7a3c924ac92aa43a85e25af6b6c4e6, type: 2}
+  Icon: {fileID: 21300000, guid: 65e4d417c10618a4782d1d1155f1cc46, type: 3}
+  LevelOffset: 0

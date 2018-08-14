@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9e8e9785fd9058944a58713e327469d1, type: 2}
   EquipmentAttributes: {fileID: 11400000, guid: b918b3092eaba8445b6ef4693ee20249,
     type: 2}
-  Type: {fileID: 0}
+  Type: {fileID: 11400000, guid: 1b358bfabd1d09c4e943dfcbd4da19ca, type: 2}
