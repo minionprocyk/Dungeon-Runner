@@ -8,8 +8,6 @@ public class Enemy : Entity {
     [SerializeField]
     protected float AggroRadius;
 
-
-
     void Start () {
         InitializeConfig();
         if(base.EntityConfig.GetType() == typeof(EnemyConfig)) 

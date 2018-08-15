@@ -13,15 +13,16 @@ public class Player : Entity {
     [SerializeField]
     private Equipment[] EquipmentPieces = new Equipment[8];
 
-    private void Start()
+    void Start()
     {
         InitializeConfig();
+        GetComponent<CharacterController>().isTrigger = false;
         if (base.EntityConfig.GetType() == typeof(PlayerConfig))
         {
             PlayerConfig playerConfig = (PlayerConfig)EntityConfig;
             Experience = playerConfig.Experience;
             ExpToNextLevel = playerConfig.ExperienceToNextLevel;
-            OnEquip(); //should update stats/spells based on current equipment
+            //OnEquip(); //should update stats/spells based on current equipment
             /**
              * Enemies have a level offset that can be used to spawn
              * enemies with a minor level variance. (Think WoW, Diablo)
@@ -46,7 +47,7 @@ public class Player : Entity {
         SpellPower += attributes.SpellPower;
         MeleePower += attributes.MeleePower;
         RangedPower += attributes.RangedPower;
-        HealingPower += attributes.HealingPower;
+        HealingPower += attributes.HealingPower;  
     }
     //when an equip piece is equipped. Take the equipments attributes 
     //and add them to the running total of the player's attributes. 

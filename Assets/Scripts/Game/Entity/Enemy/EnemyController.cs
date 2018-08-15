@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour {
         if(Enemy.InAggroRange(targetPlayer) && navMeshAgent.enabled)
         {
             navMeshAgent.SetDestination(targetPlayer.position);
+            navMeshAgent.transform.LookAt(targetPlayer);
         }
 	}
 
