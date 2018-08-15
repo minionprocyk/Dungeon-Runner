@@ -39,7 +39,9 @@ public abstract class Entity : MonoBehaviour{
     protected List<GameObject> EntitiesInRange;
     [SerializeField]
     protected List<GameObject> EntitiesInView;
-
+    [SerializeField]
+    protected GameObject CurrentTarget;
+    protected GameObject LastTarget;
     [SerializeField]
     protected UnityEvent DeathEvent;
 
