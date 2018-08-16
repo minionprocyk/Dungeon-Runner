@@ -1,11 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 [RequireComponent(typeof(SphereCollider))]
 public class TargetTag : MonoBehaviour {
     public string Tag;
-    public List<GameObject> TargetsInRange;
+    [SerializeField]
+    private List<GameObject> targetsInRange;
+    public List<GameObject> TargetsInRange
+    {
+        get
+        {
+            targetsInRange.RemoveAll(go => go == null);
+            return targetsInRange;
+        }
+    }
     public float Range=10;
 
     private SphereCollider Collider;
@@ -14,19 +23,25 @@ public class TargetTag : MonoBehaviour {
         Collider = GetComponent<SphereCollider>();
         Collider.radius = Range;
     }
-
+    private void OnTriggerStay(Collider other)
+    {
+        if (!other)
+        {
+            targetsInRange = targetsInRange.Where(go => go != null).ToList();
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals(Tag))
         {
-            TargetsInRange.Add(other.gameObject);
+            targetsInRange.Add(other.gameObject);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag.Equals(Tag))
         {
-            TargetsInRange.Remove(other.gameObject);
+            targetsInRange.Remove(other.gameObject);
         }
     }
 }

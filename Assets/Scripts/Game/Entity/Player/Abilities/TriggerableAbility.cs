@@ -14,8 +14,6 @@ public abstract class TriggerableAbility : MonoBehaviour {
 
     public virtual void Trigger(Ability ability)
     {
-        //ability.Initialize(this.gameObject);
-        //ability.Trigger();
         ability.AbilitySound.Play(audioSource);
     }
 }

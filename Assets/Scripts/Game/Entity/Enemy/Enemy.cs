@@ -31,8 +31,15 @@ public class Enemy : Entity {
     }
     public bool InAggroRange(Transform other)
     {
-        float distance = Vector3.Distance(other.position, this.transform.position);
-        return InAggroRange(distance);
+        if(other)
+        {
+            float distance = Vector3.Distance(other.position, this.transform.position);
+            return InAggroRange(distance);
+        }
+        else
+        {
+            return false;
+        }
     }
     public bool InAggroRange(float distance)
     {

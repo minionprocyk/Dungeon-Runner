@@ -10,7 +10,7 @@ public class RaycastShootTriggerable : TriggerableAbility {
     public Transform GunEnd;                                            // Holds a reference to the gun end object, marking the muzzle location of the gun.
     [HideInInspector] public LineRenderer LaserLine;                    // Reference to the LineRenderer component which will display our laserline.
 
-    private WaitForSeconds shotDuration = new WaitForSeconds(1f);     // WaitForSeconds object used by our ShotEffect coroutine, determines time laser line will remain visible.
+    private WaitForSeconds shotDuration = new WaitForSeconds(0.4f);     // WaitForSeconds object used by our ShotEffect coroutine, determines time laser line will remain visible.
 
 
     public override void Initialize()

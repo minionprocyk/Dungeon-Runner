@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-using System.Collections;
-using System;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(Camera))]
-[RequireComponent(typeof(TargetTag))]
 public abstract class Entity : MonoBehaviour{
 
     [SerializeField]
@@ -31,56 +27,15 @@ public abstract class Entity : MonoBehaviour{
     public float RangedPower;       //Attack power for only physical ranged
     public float HealingPower;      //Attack power for only healing
 
-    [SerializeField]
-    private TargetTag Targets;
-    [SerializeField]
-    private Camera Eyes;
+ 
     [SerializeField]
     protected List<GameObject> EntitiesInRange;
-    [SerializeField]
-    protected List<GameObject> EntitiesInView;
-    [SerializeField]
-    protected GameObject CurrentTarget;
-    protected GameObject LastTarget;
+
     [SerializeField]
     protected UnityEvent DeathEvent;
 
-    private void Update()
-    {
-        EntitiesInRange = Targets.TargetsInRange;
-        //calculate an area within the camera that are enemies in view
-        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(Eyes);
-        foreach(GameObject entity in EntitiesInRange)
-        {
-            Bounds bounds = new Bounds(entity.transform.position, Vector3.one);
-           // bounds.Encapsulate(entity.transform.position);
-
-            bool isInBounds = GeometryUtility.TestPlanesAABB(planes, bounds);
-            if (isInBounds)
-            {
-                if(EntitiesInView.Contains(entity)==false)
-                {
-                    EntitiesInView.Add(entity);
-                }
-            }
-        }
-        
-
-        //remove any entities from the view if they're not in range
-        foreach(GameObject entity in EntitiesInRange)
-        {
-            Bounds bounds = new Bounds(entity.transform.position, Vector3.one);
-            bool isInBounds = GeometryUtility.TestPlanesAABB(planes, bounds);
-            if(isInBounds == false)
-            {
-                EntitiesInView.Remove(entity);
-            }
-        }
-    }
     protected void InitializeConfig()
     {
-        
-
         MaxHealth = EntityConfig.EntityHealth;
         CurrentHealth = MaxHealth;
         Level = EntityConfig.EntityLevel;

@@ -8,48 +8,69 @@ public class PlayerController : MonoBehaviour {
     [Range(0f, 1f)]
     public float ButtonHeldThreshold = 0.5f;
     private float _buttonHeld = 0f;
+
+    private bool pressedAbilityOne = false;
+    private bool pressedAbilityTwo = false;
     [SerializeField]
     private GameObject InventoryMenu;
+    [SerializeField]
+    private TargetSelector Target;
     private Player player;
     private void Start()
     {
         player = GetComponent<Player>();
     }
-    //TODO: How to provide method as parameter in .NET
-    private void PerformActionIfHeld( ) 
+
+
+    private delegate void PerformAbility(int ability); 
+
+    //If ability held for at least threshold, then target and cast
+    private void IfAbilityHeld(PerformAbility method,int ability, ref bool abilityPressed)
     {
         _buttonHeld += Time.deltaTime;
-        if (_buttonHeld >= ButtonHeldThreshold)
+        if (_buttonHeld >= ButtonHeldThreshold && abilityPressed== false)
         {
-            Debug.Log("Button Held Action Here");
+            method.Invoke(ability);
+            abilityPressed = true;
         }
     }
-    // Update is called once per frame
+    //If ability held less than threshold then cast
+    private void IfAbilityNotHeld(PerformAbility method, int ability, ref bool abilityPressed)
+    {
+        abilityPressed = false;
+        if (_buttonHeld < ButtonHeldThreshold)
+        {
+            method.Invoke(ability);
+        }
+    }
+    private void SelectTargetAndCastAbility(int ability)
+    {
+        Target.SelectTarget();
+        player.CastAbility(ability);
+    }
+
     void Update () {
 	    	
         if(Input.GetButtonDown("Inventory"))
         {
             InventoryMenu.SetActive(!InventoryMenu.activeSelf);
         }
-        else if (Input.GetButtonDown("Ability1"))
-        {
-            Debug.Log("Casting ability one");
-            player.CastAbility(0);
-        }
-        else if (Input.GetButtonDown("Ability2"))
-        {
-            player.CastAbility(1);
-        }
         else if(Input.GetButton("Ability1"))
         {
-            //Debug.Log("Ability1 start hold");
-            _buttonHeld += Time.deltaTime;
-            if(_buttonHeld>=ButtonHeldThreshold)
-            {
-                Debug.Log("Button Held Action Here");
-                //Do ability targeting here?
-            }
-           
+             IfAbilityHeld(SelectTargetAndCastAbility,0,ref pressedAbilityOne);
+        }
+        else if(Input.GetButtonUp("Ability1"))
+        {
+            IfAbilityNotHeld(player.CastAbility, 0, ref pressedAbilityOne);
+        }
+        else if(Input.GetButton("Ability2"))
+        {
+            IfAbilityHeld(SelectTargetAndCastAbility, 1, ref pressedAbilityTwo);
+        }
+        else if(Input.GetButtonUp("Ability2"))
+        {
+            IfAbilityNotHeld(player.CastAbility, 1, ref pressedAbilityTwo);
+
         }
         else
         {

@@ -22,7 +22,7 @@ public class Player : Entity {
             PlayerConfig playerConfig = (PlayerConfig)EntityConfig;
             Experience = playerConfig.Experience;
             ExpToNextLevel = playerConfig.ExperienceToNextLevel;
-            //OnEquip(); //should update stats/spells based on current equipment
+            OnEquip(); //should update stats/spells based on current equipment
             /**
              * Enemies have a level offset that can be used to spawn
              * enemies with a minor level variance. (Think WoW, Diablo)
@@ -32,6 +32,7 @@ public class Player : Entity {
             //Level = EnemyConfig.EntityLevel.RuntimeValue;
         }
     }
+
     private void AddSpells(List<Ability> abilities)
     {
         SpellBook.AddRange(abilities);
